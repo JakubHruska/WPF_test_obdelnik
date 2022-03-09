@@ -1,0 +1,28 @@
+﻿<Window x:Class="WPF_test_obdelnik.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_test_obdelnik"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" MinWidth="400" MinHeight="250">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="5">
+            <Label Content="Šířka"/>
+            <TextBox Text="{Binding ElementName=SliWidth, Path=Value}" TextWrapping="Wrap" Width="120"/>
+            <Slider Minimum="0" Maximum="100" x:Name="SliWidth"/>
+            <Label Content="Výška"/>
+            <TextBox Text="{Binding ElementName=SliHeigh, Path=Value}" TextWrapping="Wrap" Width="120"/>
+            <Slider Minimum="0" Maximum="100" x:Name="SliHeigh"/>
+        </StackPanel>
+    </Grid>
+</Window>
